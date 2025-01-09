@@ -1,0 +1,65 @@
+import java.util.*;
+
+public class Main {
+  
+void reverse(int arr[],int start,int end){
+   
+    
+    while(start<=end){
+      int temp=arr[start];
+      arr[start]=arr[end];
+      arr[end]=temp;
+      
+      start++;
+      end--;
+    }
+    
+  }
+    
+     void reverseleft(int arr[],int n,int k){
+      
+      k=k%n;
+      
+      reverse(arr,0,k-1);
+      reverse(arr,k,n-1);
+      reverse(arr,0,n-1);
+      
+      
+       for(int s:arr)
+           System.out.print(s+" ");
+    
+       System.out.println();
+    }
+    
+    
+    void reverseright(int arr[],int n,int k){
+      k=k%n;
+      
+       reverse(arr,0,n-k-1);
+      reverse(arr,n-k,n-1);
+      reverse(arr,0,n-1);
+      
+      
+       for(int s:arr)
+          System.out.print(s+" ");
+      
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+  
+    public static void main(String[] args) {
+      
+      
+      int arr[]={2,56,43,5,6,8,6,54,3};
+      
+      reverseleft(arr,9,3);
+      reverseright(arr,9,5);
+      System.out.println("Hello, World!");
+  }
+}
