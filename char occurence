@@ -1,0 +1,33 @@
+import java.util.*;
+
+
+
+
+public class Main {
+  
+  
+  static void countoccurence(String s){
+    
+    int ch[]=new int[256];
+    
+    for(char c: s.toCharArray()){
+      ch[c]++;
+    }
+    
+    System.out.println("characyter occurnce");
+    for(int i=0;i<ch.length;i++){
+      if(ch[i]>0){
+        System.out.println((char)i +" : "+ch[i]);
+  
+      }
+    }
+  
+    
+    
+  }
+    public static void main(String[] args) {
+      
+      countoccurence("adarsh");
+      
+}
+}
